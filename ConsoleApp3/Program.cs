@@ -4,6 +4,9 @@ namespace ConsoleApp3
 {
     internal class Program
     {
+        //DAN EATS POO
+        //I HAVE PROOF
+        
         static Random rand = new Random();
         static List<int> playerHPList = new List<int> { 20, 30, 40, 50, 60, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 };
         static List<int> playerDamList = new List<int> { 7, 12, 16, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19 };
@@ -30,6 +33,7 @@ namespace ConsoleApp3
         static int healcounter = 2;
         static void Main(string[] args)
         {
+            Console.WriteLine("Yo");
             intro();
             FindMonster();
         }

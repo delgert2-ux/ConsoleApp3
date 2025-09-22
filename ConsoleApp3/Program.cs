@@ -11,11 +11,11 @@ namespace ConsoleApp3
         static int playerHealth = 20;
         static int playerDamage = 10;
         static int playerHit = 75;
-        static List<int> monsterHPList = new List<int> { 20, 25, 16, 100 };
-        static List<int> monsterDamList = new List<int> { 7, 5, 8, 12 };
-        static List<string> monsterNameList = new List<string> { "Skeleton", "Zombie", "Goblin", "Massive Ogre!" };
-        static List<int> monsterHitsList = new List<int> { 65, 80, 69, 85 };
-        static List<int> monsterXPList = new List<int> { 10, 15, 12, 50};
+        static List<int> monsterHPList = new List<int> { 20, 25, 16, 100, 500 };
+        static List<int> monsterDamList = new List<int> { 7, 5, 8, 12, 50 };
+        static List<string> monsterNameList = new List<string> { "Skeleton", "Zombie", "Goblin", "Massive Ogre!", "Small unassuming white rabbit"};
+        static List<int> monsterHitsList = new List<int> { 65, 80, 69, 85, 90 };
+        static List<int> monsterXPList = new List<int> { 10, 15, 12, 50, 80};
         static List<int> levelchecklist = new List<int> { 10, 25, 50, 85, 110, 150, 210, 280, 340, 380, 430, 490, 560 };
         static int monsterHp = 0;
         static int monsterDam = 0;
@@ -56,7 +56,8 @@ namespace ConsoleApp3
         {
             Console.Clear();
             if (currentLevel >= 3) currentMonster = (3);
-            if (currentLevel < 3) currentMonster = rand.Next(0,2);
+            if (currentLevel >= 8) currentMonster = (4);
+            if (currentLevel < 3) currentMonster = rand.Next(0,3);
             ResetInfo();
             Console.WriteLine($"You explore and you find... a {monsterName}!");
             Console.WriteLine("Press any key to continue");
